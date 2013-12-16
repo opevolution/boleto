@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_boleto_create_form">
+        <field name="name">boleto.boleto_create.form</field>
+        <field name="model">boleto.boleto_create</field>
+        <field name="arch" type="xml">
+            <form string="Gerar Boletos" version="7.0">
+				<field name="file" string="Arquivo" filename="file_name" />
+				<field name="file_name" string="Nome do Arquivo" />
+				<field name="state" string="state" />
+				<button icon="gtk-apply" name="create_boleto" string="Gerar boletos" type="object"/>				
+			</form>
+        </field>
+    </record>
+
+    <act_window id="wiz_boleto_create"
+      key2="client_action_multi" name="Gerar Boletos"
+      res_model="boleto.boleto_create" src_model="boleto.boleto"
+      view_id="view_boleto_create_form"
+      view_mode="form" target="new" view_type="form"/>
+         
+  </data>
+</openerp>
+	

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="view_boleto_partner_form">
+      <field name="name">boleto.partner.form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+		<notebook>
+			<page position="inside" string="Boletos">
+				<page string="Boletos">
+					<field name="boleto_partner_config"/>
+				</page>
+        	</page>
+        </notebook>
+	  </field>
+	</record>
+
+  </data>
+</openerp>
